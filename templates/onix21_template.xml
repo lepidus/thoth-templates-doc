@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ONIXMessage xmlns="http://www.editeur.org/onix/2.1/reference">
+    <Header>
+        <FromCompany>My Publisher</FromCompany>
+        <FromEmail>contact@publisher.com</FromEmail>
+        <SentDate>202401011200</SentDate>
+    </Header>
+
+    <Product>
+
+        <RecordReference>9781800649866</RecordReference> <!-- ISBN-13 Recommended -->
+        <NotificationType>03</NotificationType> <!-- 03 Notification confirmed on publication -->
+        <RecordSourceType>01</RecordSourceType> <!-- 01 Publisher -->
+
+        <ProductIdentifier>
+            <ProductIDType>15</ProductIDType> <!-- 15 ISBN-13 -->
+            <IDValue>9781800649866</IDValue>
+        </ProductIdentifier>
+
+        <!-- DOI -->
+        <ProductIdentifier>
+            <ProductIDType>06</ProductIDType> <!-- 06 DOI -->
+            <IDValue>10.12345/12345678</IDValue>
+        </ProductIdentifier>
+
+        <!-- LCCN -->
+        <ProductIdentifier>
+            <ProductIDType>13</ProductIDType> <!-- 13 LCCN -->
+            <IDValue>2014123456</IDValue>
+        </ProductIdentifier>
+
+        <!-- OCLC -->
+        <ProductIdentifier>
+            <ProductIDType>23</ProductIDType> <!-- 23 OCLC number -->
+            <IDValue>1000123456</IDValue>
+        </ProductIdentifier>
+
+        <!-- Internal Reference -->
+        <ProductIdentifier>
+            <ProductIDType>01</ProductIDType> <!-- 01 Proprietary -->
+            <IDTypeName>internal-reference</IDTypeName>
+            <IDValue>my_internal_reference</IDValue>
+        </ProductIdentifier>
+
+        <!-- Publication Format -->
+        <ProductForm>DG</ProductForm> <!-- DG Electronic book text -->
+        <EpubType>002</EpubType> <!-- 002 PDF -->
+
+        <Series>
+            <!-- ISSN -->
+            <SeriesIdentifier>
+                <SeriesIDType>02</SeriesIDType> <!-- 02 ISSN -->
+                <IDValue>11112222</IDValue>
+            </SeriesIdentifier>
+
+            <!-- Series URL -->
+            <SeriesIdentifier>
+                <SeriesIDType>01</SeriesIDType> <!-- 01 Proprietary -->
+                <IDTypeName>Series URL</IDTypeName>
+                <IDValue>https://my.publisher.com/my_series</IDValue>
+            </SeriesIdentifier>
+
+            <!-- Series CFP -->
+            <SeriesIdentifier>
+                <SeriesIDType>01</SeriesIDType> <!-- 01 Proprietary -->
+                <IDTypeName>Series Call for Proposals URL</IDTypeName>
+                <IDValue>https://my.publisher.com/my_series/cfp</IDValue>
+            </SeriesIdentifier>
+
+            <TitleOfSeries>My Series Name</TitleOfSeries>
+            <NumberWithinSeries>1</NumberWithinSeries>
+        </Series>
+
+        <!-- Book Title -->
+        <Title>
+            <TitleType>01</TitleType> <!-- 01 Distinctive title (book) -->
+            <TitleText>Book Title</TitleText>
+            <Subtitle>Book Subtitle</Subtitle>
+        </Title>
+
+        <!-- Title Landing Page -->
+        <Website>
+            <WebsiteRole>02</WebsiteRole> <!-- 02 Publisher’s website for a specified work -->
+            <WebsiteDescription>Publisher's website: webpage for this title</WebsiteDescription>
+            <WebsiteLink>https://my.publisher.com/book/my-book</WebsiteLink>
+        </Website>
+
+        <!-- Publication Landing Page -->
+        <Website>
+            <WebsiteRole>02</WebsiteRole> <!-- 02 Publisher’s website for a specified work -->
+            <WebsiteDescription>Publisher's website: webpage for this product</WebsiteDescription>
+            <WebsiteLink>https://my.publisher.com/book/my-book/pdf_landing_page</WebsiteLink>
+        </Website>
+
+        <!-- Publication Landing Pages -->
+        <Website>
+            <WebsiteRole>02</WebsiteRole> <!-- 02 Publisher’s website for a specified work -->
+            <WebsiteDescription>Publisher's website: webpage for this product</WebsiteDescription>
+            <WebsiteLink>https://my.publisher.com/book/my-book/pdf_landing_page</WebsiteLink>
+        </Website>
+        <Website>
+            <WebsiteRole>36</WebsiteRole> <!-- 36 Supplier’s website for a specified work -->
+            <WebsiteDescription>Unspecified hosting platform: webpage for this product</WebsiteDescription>
+            <WebsiteLink>https://unknown.site/book/my-book/pdf_landing_page</WebsiteLink>
+        </Website>
+        <Website>
+            <WebsiteRole>36</WebsiteRole> <!-- 36 Supplier’s website for a specified work -->
+            <WebsiteDescription>OAPEN: webpage for this product</WebsiteDescription> <!-- OAPEN -->
+            <WebsiteLink>https://library.oapen.org/book/my-book/pdf_landing_page</WebsiteLink>
+        </Website>
+
+        <!-- Publication Text URL -->
+        <Website>
+            <WebsiteRole>02</WebsiteRole> <!-- 02 Publisher’s website for a specified work -->
+            <WebsiteDescription>Publisher's website: download the title</WebsiteDescription>
+            <WebsiteLink>https://my.publisher.com/book/my-book/pdf_fulltext</WebsiteLink>
+        </Website>
+        <Website>
+            <WebsiteRole>36</WebsiteRole> <!-- 36 Supplier’s website for a specified work -->
+            <WebsiteDescription>Unspecified hosting platform: download the title</WebsiteDescription>
+            <WebsiteLink>https://unknown.site/book/my-book/pdf_fulltext</WebsiteLink>
+        </Website>
+        <Website>
+            <WebsiteRole>36</WebsiteRole> <!-- 36 Supplier’s website for a specified work -->
+            <WebsiteDescription>OAPEN: download the title</WebsiteDescription> <!-- OAPEN -->
+            <WebsiteLink>https://library.oapen.org/book/my-book/pdf_fulltext</WebsiteLink>
+        </Website>
+
+        <!-- Contributions -->
+        <Contributor>
+            <SequenceNumber>1</SequenceNumber>
+            <ContributorRole>A01</ContributorRole> <!-- A01 By (author) -->
+            <NamesBeforeKey>John</NamesBeforeKey>
+            <KeyNames>Doe</KeyNames>
+            <!--
+            <PersonName>John Doe</PersonName> Use instead of <NamesBeforeKey> and <KeyNames> for the full name
+            -->
+
+            <!-- ORCID -->
+            <PersonNameIdentifier>
+                <PersonNameIDType>01</PersonNameIDType> <!-- 01 Proprietary -->
+                <IDTypeName>ORCID</IDTypeName>
+                <IDValue>0000-0001-2345-678X</IDValue>
+            </PersonNameIdentifier>
+
+            <!-- Affiliation -->
+            <ProfessionalAffiliation>
+                <ProfessionalPosition>Professor</ProfessionalPosition>
+                <Affiliation>Harvard University</Affiliation>
+            </ProfessionalAffiliation>
+
+            <BiographicalNote>This is the bibliography of the author of my book.</BiographicalNote>
+
+        </Contributor>
+
+        <EditionNumber>2</EditionNumber> <!-- Normally sent only for the second and subsequent editions -->
+
+        <Language>
+            <LanguageRole>01</LanguageRole> <!-- 01 Language of text -->
+            <LanguageCode>eng</LanguageCode>
+        </Language>
+
+        <!-- Page Count -->
+        <Extent>
+            <ExtentType>00</ExtentType> <!-- 00 Main content -->
+            <ExtentValue>275</ExtentValue>
+            <ExtentUnit>03</ExtentUnit> <!-- 03 Pages -->
+        </Extent>
+
+        <!-- Bibliography Note -->
+        <IllustrationsNote>This is a bibliography note of my book.</IllustrationsNote>
+
+        <!-- Image Count -->
+        <Illustrations>
+            <IllustrationType>09</IllustrationType> <!-- 09 Illustrations, unspecified -->
+            <Number>13</Number>
+        </Illustrations>
+
+        <!-- Table Count -->
+        <Illustrations>
+            <IllustrationType>11</IllustrationType> <!-- 11 Tables, unspecified -->
+            <Number>5</Number>
+        </Illustrations>
+
+        <!-- Audio Count -->
+        <Illustrations>
+            <IllustrationType>19</IllustrationType> <!-- 19 Recorded music items -->
+            <Number>2</Number>
+        </Illustrations>
+
+        <!-- Video Count -->
+        <Illustrations>
+            <IllustrationType>00</IllustrationType> <!-- 00 Unspecified, see description -->
+            <IllustrationTypeDescription>Videos</IllustrationTypeDescription>
+            <Number>2</Number>
+        </Illustrations>
+
+        <!-- BISAC Subject -->
+        <Subject>
+            <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+            <SubjectCode>1.1.2.2.0.0.0</SubjectCode>
+        </Subject>
+
+        <!-- BIC Subject -->
+        <Subject>
+            <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+            <SubjectCode>1D</SubjectCode>
+        </Subject>
+
+        <!-- LCC Subject -->
+        <Subject>
+            <SubjectSchemeIdentifier>04</SubjectSchemeIdentifier>
+            <SubjectCode>BD183</SubjectCode>
+        </Subject>
+
+        <!-- Keywords Subject-->
+        <Subject>
+            <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+            <SubjectHeadingText>Interest-Relative Epistemology</SubjectHeadingText>
+        </Subject>
+
+        <!-- Thema Subject -->
+        <Subject>
+            <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+            <SubjectCode>1A</SubjectCode>
+        </Subject>
+
+        <!-- Custom Subject -->
+        <Subject>
+            <SubjectSchemeIdentifier>B2</SubjectSchemeIdentifier> <!-- B2 Keywords (not for display) -->
+            <SubjectHeadingText>Philosophy</SubjectHeadingText>
+        </Subject>
+
+        <Audience>
+            <AudienceCodeType>01</AudienceCodeType> <!-- 01 ONIX audience codes -->
+            <AudienceCodeValue>06</AudienceCodeValue> <!-- 06 Professional and scholarly -->
+        </Audience>
+
+        <!-- For open access books -->
+        <OtherText>
+            <TextTypeCode>47</TextTypeCode> <!-- 47 Open access statement -->
+            <Text>Open access - no commercial use</Text>
+        </OtherText>
+
+        <!-- License -->
+        <OtherText>
+            <TextTypeCode>46</TextTypeCode> <!-- 46 License -->
+            <Text>https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode</Text>
+        </OtherText>
+
+        <!-- Short Abstract -->
+        <OtherText>
+            <TextTypeCode>02</TextTypeCode> <!-- 02 Short description/annotation -->
+            <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+            <Text>This is the short abstract of my book.</Text>
+        </OtherText>
+
+        <!-- Long Abstract -->
+        <OtherText>
+            <TextTypeCode>03</TextTypeCode> <!-- 03 Long description -->
+            <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+            <Text>This is the long abstract of my book.</Text>
+        </OtherText>
+
+        <!-- Table of Content -->
+        <OtherText>
+            <TextTypeCode>04</TextTypeCode> <!-- 04 Table of contents -->
+            <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+            <Text>1. Prologue 2. Chapter 1 3. Chapter 2 4. Chapter 3 5. Epilogue</Text>
+        </OtherText>
+
+        <!-- General Note -->
+        <OtherText>
+            <TextTypeCode>21</TextTypeCode> <!-- 21 Publisher’s notice -->
+            <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+            <Text>This is a general note of my book.</Text>
+        </OtherText>
+
+        <!-- Cover -->
+        <MediaFile>
+            <MediaFileTypeCode>04</MediaFileTypeCode> <!-- 04 Image: front cover -->
+            <MediaFileLinkTypeCode>01</MediaFileLinkTypeCode> <!-- 01 URL -->
+            <MediaFileLink>https://my.publisher.com/book/my-book/cover.jpg</MediaFileLink>
+            <TextWithDownload>This is the cover caption of my book</TextWithDownload>
+        </MediaFile>
+
+        <!-- Chapters -->
+        <ContentItem>
+            <LevelSequenceNumber>1</LevelSequenceNumber>
+            <TextItem>
+                <TextItemType>03</TextItemType> <!-- 03 Body matter -->
+                <TextItemIdentifier>
+                    <TextItemIDType>06</TextItemIDType> <!-- 06 DOI -->
+                    <IDValue>10.12345/11112222</IDValue>
+                </TextItemIdentifier>
+                <PageRun>
+                    <FirstPageNumber>23</FirstPageNumber>
+                    <LastPageNumber>35</LastPageNumber>
+                </PageRun>
+            </TextItem>
+            <ComponentTypeName>Chapter</ComponentTypeName>
+        </ContentItem>
+
+        <Imprint>
+            <ImprintName>My Publisher Imprint</ImprintName>
+        </Imprint>
+
+        <Publisher>
+            <PublishingRole>01</PublishingRole> <!-- 01 Publisher -->
+            <PublisherName>My Publisher</PublisherName>
+            <Website>
+                <WebsiteLink>https://my.publisher.website.com</WebsiteLink>
+            </Website>
+        </Publisher>
+
+        <!-- Funding -->
+        <Publisher>
+            <PublishingRole>16</PublishingRole> <!-- 16 Funding body -->
+            <NameCodeType>01</NameCodeType> <!-- 01 Proprietary -->
+            <NameCodeTypeName>ROR</NameCodeTypeName>
+            <NameCodeValue>01a23bcd4</NameCodeValue>
+            <PublisherName>Funding Institution</PublisherName>
+        </Publisher>
+
+        <!-- Place -->
+        <CityOfPublication>Earth, Milky Way</CityOfPublication>
+
+        <PublishingStatus>04</PublishingStatus> <!-- 04 Active -->
+
+        <PublicationDate>20240101</PublicationDate>
+
+        <!-- Copyright Holder -->
+        <CopyrightStatement>
+            <CopyrightYear>2024</CopyrightYear>
+            <CopyrightOwner>
+                <PersonName>John Doe</PersonName>
+            </CopyrightOwner>
+        </CopyrightStatement>
+
+        <SalesRights>
+            <SalesRightsType>02</SalesRightsType> <!-- 02 For sale with non-exclusive rights in the specified countries or territories -->
+            <RightsTerritory>WORLD</RightsTerritory>
+        </SalesRights>
+
+        <!-- Dimensions (for physical formats) -->
+        <!-- Width -->
+        <Measure>
+            <MeasureTypeCode>02</MeasureTypeCode> <!-- 02 Width -->
+            <Measurement>152</Measurement>
+            <MeasureUnitCode>mm</MeasureUnitCode>
+        </Measure>
+        <!-- Height -->
+        <Measure>
+            <MeasureTypeCode>01</MeasureTypeCode> <!-- 01 Height -->
+            <Measurement>229</Measurement>
+            <MeasureUnitCode>mm</MeasureUnitCode>
+        </Measure>
+        <!-- Depth -->
+        <Measure>
+            <MeasureTypeCode>03</MeasureTypeCode> <!-- 03 Thickness -->
+            <Measurement>20</Measurement>
+            <MeasureUnitCode>mm</MeasureUnitCode>
+        </Measure>
+        <!-- Weight -->
+        <Measure>
+            <MeasureTypeCode>08</MeasureTypeCode> <!-- 08 Unit weight -->
+            <Measurement>706</Measurement>
+            <MeasureUnitCode>gr</MeasureUnitCode>
+        </Measure>
+
+        <!-- Citation with DOI -->
+        <RelatedProduct>
+            <RelationCode>34</RelationCode> <!-- 34 Cites -->
+            <ProductIdentifier>
+                <ProductIDType>06</ProductIDType> <!-- 06 DOI -->
+                <IDValue>10.12345/01020102</IDValue>
+            </ProductIdentifier>
+        </RelatedProduct>
+
+        <!-- Citation without DOI -->
+        <RelatedProduct>
+            <RelationCode>34</RelationCode> <!-- 34 Cites -->
+            <ProductIdentifier>
+                <ProductIDType>01</ProductIDType> <!-- 01 Proprietary -->
+                <IDTypeName>Unstructured citation</IDTypeName>
+                <IDValue>Roe, Richard. (2019). A reference used in my book. University of Harvard.</IDValue>
+            </ProductIdentifier>
+        </RelatedProduct>
+
+        <!-- Withdrawn Date -->
+        <OutOfPrintDate>20250101</OutOfPrintDate>
+
+        <SupplyDetail>
+            <SupplierName>My Publisher</SupplierName>
+            <SupplierRole>09</SupplierRole> <!-- 09 Publisher to end-customers -->
+            <ProductAvailability>99</ProductAvailability> <!-- 99 Contact supplier -->
+
+            <!-- For open acess books -->
+            <AudienceRestrictionFlag>R</AudienceRestrictionFlag> <!-- R Restrictions apply, see note -->
+            <AudienceRestrictionNote>Open access</AudienceRestrictionNote>
+
+            <!-- For unpriced publications
+            <UnpricedItemType>01</UnpricedItemType> 01 Free of charge
+            -->
+
+            <Price>
+                <PriceTypeCode>02</PriceTypeCode> <!-- 02 RRP including tax -->
+                <PriceAmount>0.01</PriceAmount>
+                <CurrencyCode>USD</CurrencyCode>
+            </Price>
+        </SupplyDetail>
+
+    </Product>
+
+</ONIXMessage>
