@@ -879,3 +879,73 @@ Contains information about the supply of the product.
     </Price>
 </SupplyDetail>
 ```
+#### SupplierName
+`Mandatory`
+
+The name of a supply source from which the product may be ordered by a trade customer
+
+```xml
+<SupplierName>My Publisher</SupplierName>
+```
+
+#### SupplierRole
+`Mandatory`
+
+An ONIX code identifying the role of a supplier in relation to the product. Default `09` (Publisher to end-customers)
+
+```xml
+<SupplierRole>09</SupplierRole>
+```
+
+#### ProductAvailability
+`Mandatory`
+
+An ONIX code indicating the availability of a product from a supplier.
+
+```xml
+<ProductAvailability>99</ProductAvailability>
+```
+
+#### AudienceRestrictionFlag
+`Optional`
+
+Used with `<AudienceRestrictionNote>` where within a particular market there is an additional restriction on sale. Use to indicate open acess books. Default `R` (Restrictions apply, see note)
+
+```xml
+<AudienceRestrictionFlag>R</AudienceRestrictionFlag>
+```
+
+#### AudienceRestrictionNote
+`Optional`
+
+Free text describing a non-territorial restriction on supply. Use to indicate open acess books.
+
+```xml
+<AudienceRestrictionNote>Open access</AudienceRestrictionNote>
+```
+
+#### UnpricedItemType
+`Optional`
+
+An ONIX code which specifies a reason why a price amount is not sent. Default `01` (Free of charge)
+
+```xml
+<UnpricedItemType>01</UnpricedItemType>
+```
+
+#### Price
+`Optional`
+
+```xml
+<Price>
+  <PriceTypeCode>02</PriceTypeCode>
+  <PriceAmount>0.01</PriceAmount>
+  <CurrencyCode>USD</CurrencyCode>
+</Price>
+```
+
+**Sub-elements**:
+- `PriceTypeCode` - ONIX code indicating the type of the price.
+  - `02`: RRP including tax
+- `PriceAmount` - The amount of a price.
+- `CurrencyCode` - An ISO standard code identifying the currency in which a price is given.
