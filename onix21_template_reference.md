@@ -484,7 +484,7 @@ The language of the product.
 - `LanguageCode` - An ISO 639-2/B code for the language.
 
 ### Extent
-`Optional, Repeatable`
+`Optional`
 
 The extent of the product, such as the number of pages.
 
@@ -506,7 +506,9 @@ The extent of the product, such as the number of pages.
 ### IllustrationsNote
 `Optional`
 
-A note about the illustrations in the product.
+A note about the illustrations in the product. The text may also include other content items, eg maps, bibliography, tables, index etc.
+
+Use this element for bibliography notes.
 
 ```xml
 <IllustrationsNote>Includes bibliographical references and index.</IllustrationsNote>
@@ -539,18 +541,40 @@ Describes content that is ancillary to the main content of the product.
 A subject of the product.
 
 ```xml
-<!-- LCC -->
+<!-- BISAC Subject -->
+<Subject>
+    <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+    <SubjectCode>1.1.2.2.0.0.0</SubjectCode>
+</Subject>
+
+<!-- BIC Subject -->
+<Subject>
+    <SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+    <SubjectCode>1D</SubjectCode>
+</Subject>
+
+<!-- LCC Subject -->
 <Subject>
     <SubjectSchemeIdentifier>04</SubjectSchemeIdentifier>
     <SubjectCode>BD183</SubjectCode>
 </Subject>
-```
 
-```xml
-<!-- Keywords -->
+<!-- Keywords Subject-->
 <Subject>
     <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
     <SubjectHeadingText>Interest-Relative Epistemology</SubjectHeadingText>
+</Subject>
+
+<!-- Thema Subject -->
+<Subject>
+    <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+    <SubjectCode>1A</SubjectCode>
+</Subject>
+
+<!-- Custom Subject -->
+<Subject>
+    <SubjectSchemeIdentifier>B2</SubjectSchemeIdentifier> <!-- B2 Keywords (not for display) -->
+    <SubjectHeadingText>Philosophy</SubjectHeadingText>
 </Subject>
 ```
 
@@ -568,7 +592,7 @@ A subject of the product.
 - `SubjectHeadingText` - The text of the subject heading. For Keywords
 
 ### Audience
-`Optional, Repeatable`
+`Mandatory`
 
 The target audience of the product.
 
@@ -591,9 +615,44 @@ The target audience of the product.
 Contains text related to the product, such as a description or abstract.
 
 ```xml
+<!-- For open access books -->
 <OtherText>
-    <TextTypeCode>02</TextTypeCode>
+    <TextTypeCode>47</TextTypeCode> <!-- 47 Open access statement -->
+    <Text>Open access - no commercial use</Text>
+</OtherText>
+
+<!-- License -->
+<OtherText>
+    <TextTypeCode>46</TextTypeCode> <!-- 46 License -->
+    <Text>https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode</Text>
+</OtherText>
+
+<!-- Short Abstract -->
+<OtherText>
+    <TextTypeCode>02</TextTypeCode> <!-- 02 Short description/annotation -->
+    <TextFormat>06</TextFormat> <!-- 06 Default text format -->
     <Text>This is the short abstract of my book.</Text>
+</OtherText>
+
+<!-- Long Abstract -->
+<OtherText>
+    <TextTypeCode>03</TextTypeCode> <!-- 03 Long description -->
+    <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+    <Text>This is the long abstract of my book.</Text>
+</OtherText>
+
+<!-- Table of Content -->
+<OtherText>
+    <TextTypeCode>04</TextTypeCode> <!-- 04 Table of contents -->
+    <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+    <Text>1. Prologue 2. Chapter 1 3. Chapter 2 4. Chapter 3 5. Epilogue</Text>
+</OtherText>
+
+<!-- General Note -->
+<OtherText>
+    <TextTypeCode>21</TextTypeCode> <!-- 21 Publisher’s notice -->
+    <TextFormat>06</TextFormat> <!-- 06 Default text format -->
+    <Text>This is a general note of my book.</Text>
 </OtherText>
 ```
 
@@ -608,7 +667,7 @@ Contains text related to the product, such as a description or abstract.
 - `Text` - The text content.
 
 ### MediaFile
-`Optional, Repeatable`
+`Optional`
 
 A resource that supports the product, such as a cover image.
 
@@ -632,7 +691,7 @@ A resource that supports the product, such as a cover image.
 ### ContentItem
 `Optional, Repeatable`
 
-An item of content in the product.
+An item of content in the product. Use this element for chapters
 
 ```xml
 <ContentItem>
@@ -653,7 +712,7 @@ An item of content in the product.
 ```
 
 ### Imprint
-`Optional`
+`Mandatory`
 
 Contains the imprint name.
 
@@ -684,13 +743,23 @@ Contains information about the publisher.
 The city of publication.
 
 ```xml
-<CityOfPublication>Earth, Milky Way</CityOfPublication>
+<CityOfPublication>Vancouver, CA</CityOfPublication>
 ```
 
 ### PublishingStatus
-`Optional`
+`Mandatory`
 
-An ONIX code for the publishing status. Default `04` (Active).
+An ONIX code for the publishing status.
+
+| ONIX Code | Description |
+| :--- | :--- |
+| 01 | Cancelled |
+| 02 | Forthcoming |
+| 03 | Postponed Indefinitely |
+| 04 | Active |
+| 08 | Inactive |
+| 11 | Withdrawn from sale |
+
 
 ```xml
 <PublishingStatus>04</PublishingStatus>
@@ -720,7 +789,7 @@ Copyright information.
 ```
 
 ### SalesRights
-`Optional, Repeatable`
+`Optional`
 
 Sales rights for the product.
 
@@ -779,6 +848,8 @@ A related product.
 
 **Sub-elements**:
 - `RelationCode` - An ONIX code for the relation.
+  - `01`: Includes
+  - `11`: Is other-language version of 
   - `34`: Cites
 - `ProductIdentifier` - The identifier of the related product.
 
