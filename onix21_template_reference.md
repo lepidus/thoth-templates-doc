@@ -480,6 +480,7 @@ The language of the product.
 **Sub-elements**:
 - `LanguageRole` - An ONIX code for the role of the language.
   - `01`: Language of text
+  - `02`: Original language of a translated text
 - `LanguageCode` - An ISO 639-2/B code for the language.
 
 ### Extent
